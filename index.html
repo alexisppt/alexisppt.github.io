@@ -12,7 +12,7 @@
                 var nameInput = document.getElementById("nameInput").value.toLowerCase();
                 var outputText = document.getElementById("outputText");
     
-                if (nameInput === "silvia") {
+                if (nameInput === "silvia" || nameInput === "silvia quisbert") {
                     outputText.innerHTML = "Sí eres cuchi!";
                 } else {
                     outputText.innerHTML = "No eres cuchi";
@@ -25,9 +25,10 @@
         <h1 id="title">Introduce tu nombre y veamos si eres cuchi...</h1>
         <form>
             <label id="label" for="nameInput">Escribe tu nombre:</label>
-            <input name="namecheck" id="nameInput" type="text" value="" maxlength="32" pattern="[A-Za-z]{1,32}" required>
+            <input name="nameInput" id="nameInput" type="text" 
+            value="" maxlength="15" pattern="[a-zA-Z]{1,14}" required>
 
-            <button id="checkButton" onclick="checkName()">Soy cuchi?</button>
+            <input type="submit" id="checkButton" onclick="checkName()" value="Soy cuchi?">
         </form>
         <div id="outputText"></div>
     </body>
